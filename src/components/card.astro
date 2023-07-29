@@ -1,0 +1,56 @@
+---
+export interface CardProps{
+    num: number;
+    subhead: string;
+    info: string;
+
+}
+const{num, subhead, info} = Astro.props
+---
+
+<div>
+    <h1>{num}+</h1>
+    <h6>{subhead}</h6>
+    <p>{info}</p>
+</div>
+<style>
+    div{
+        width: 32ch;
+        border: solid grey 1px;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding:1em ;
+
+    }
+    h1{
+        color: #315316;
+
+/* H2 */
+font-family: Ibarra Real Nova;
+font-size: 3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 125.5%; /* 3.765rem */
+    }
+    h6{
+        color: #121212;
+
+/* H5 */
+font-family: Hind Madurai;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 115.5%; /* 1.7325rem */
+    }
+    p{
+        color: #3E3E3E;
+
+/* Text Paragraph */
+font-family: Hind Madurai;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 2.025rem */
+    }
+</style>
