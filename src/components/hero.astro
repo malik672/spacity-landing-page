@@ -2,8 +2,8 @@
 
 
 import heroimg from "../../src/assets/hero.png"
- import leaf_first  from "../../assets/leaf.png"
- import Right_leaf from "../../assets/leaf.png"
+import leaf_first  from "../../assets/leaf2.png"
+import Right_leaf from "../../assets/leaf.png"
 ---
 
 <main>
@@ -13,14 +13,24 @@ import heroimg from "../../src/assets/hero.png"
                 <!-- <div class="OMO"></div> -->
                 <h1>Beauty Has A Purpose and Purpose Is You</h1>
               <p>Spacity where luxury meets relaxation. we provide our clients with the ultimate spa experience, offering a wide range of services to pamper and rejuvenate your mind, body, Book your appointment today and let us help you unwind and escape the stresses of daily life.</p>
+              <img class="leaf1" src={ leaf_first } alt="">
+            </div>
+            <div class="btnbx">
+
+                <div class="BTN1">
+                    <a href="#">Book now</a>
+                </div>
+                <div class="BTN2">
+                    <a href="#">Learn More</a>
+    
+                </div>
             </div>
         </div>
         <div class="rightcol">
             <div class="imgbx">
                 <!-- use postion relative to add the leafs to the hero section and add the img to the html -->
-             <img src={ heroimg } alt="">
-             <img src={ leaf_first } alt="">
-             <img src={ Right_leaf } alt="">
+             <img class="heroimg" src={ heroimg } alt="">
+             <img class="leaf2" src={ Right_leaf } alt="">
             </div>
         </div>
     </div>
@@ -45,31 +55,60 @@ font-weight: 400;
 line-height: 180%; /* 2.025rem */
     }
     main{
-
+                background-color: linear-gradient(176deg, #dddddd 0%, #F1F1F1 100%);
         
                 background-repeat: no-repeat;
                 background-image: url(../assets/blob.png) ;
                 background-position:  top right;
                 background-size: 600px ;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
     }
+    .BTN1{
+        display: flex;
+padding: 1rem 2.5rem;
+align-items: flex-start;
+gap: 0.625rem;
+border-radius: 3.125rem;
+background: linear-gradient(146deg, #315316 0%, #72A748 100%);
+color: white;
+
+    }
+    .leaf1{
+        position: absolute;
+        top: 1em;
+    }
+    .BTN2{
+        border: #315316 1px solid;
+        border-radius: 3.125rem;
+        display: flex;
+padding: 1rem 2.5rem;
+align-items: flex-start;
+color: black;
+gap: 0.625rem;
+    }
     .content{
+        /* margin-top: 1; */
         min-height: 80vh;
         
         /* background: green; */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* gap: 10em; */
+        gap: 3em;
         margin-inline: 6em;
+        margin-top: 5em;
     }
-    .imgbx img{
+    .imgbx .heroimg{
         display: block;
         width: 100%;
         object-fit: contain;
     }
     .imgbx{
         width: 650px;
+        position: relative;
     }
     .container {
   width: 300px;
@@ -79,5 +118,22 @@ line-height: 180%; /* 2.025rem */
 
     .textbx{
         width: 38rem;
+        /* test */
+
+    }
+    .textbx img{
+        display: block;
+        width: 30%;
+        object-fit: contain;
+    }
+    .btnbx{
+        display: flex;
+        align-items: center;
+        margin-top: 2em;
+        gap: 1.25em;
+    }
+    .btnbx a{
+        color: inherit;
+        text-decoration: none;
     }
 </style>
