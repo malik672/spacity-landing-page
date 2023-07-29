@@ -1,0 +1,77 @@
+---
+import heroimg from "../../src/assets/hero.png"
+ 
+---
+
+<main>
+    <div class="content">
+        <div class="leftcol">
+            <div class="textbx">
+                <h1>Beauty Has A Purpose and Purpose Is You</h1>
+              <p>Spacity where luxury meets relaxation. we provide our clients with the ultimate spa experience, offering a wide range of services to pamper and rejuvenate your mind, body, Book your appointment today and let us help you unwind and escape the stresses of daily life.</p>
+            </div>
+        </div>
+        <div class="rightcol">
+            <div class="imgbx">
+                <!-- use postion relative to add the leafs to the hero section and add the img to the html -->
+             <img src={ heroimg } alt="">
+            </div>
+        </div>
+    </div>
+</main>
+<style>
+    h1{
+
+font-family: 'Ibarra Real Nova', serif;
+font-size: 4rem;
+font-style: normal;
+font-weight: 800;
+line-height: 121.5%; /* 4.86rem */
+    }
+    p{
+        color: #3E3E3E;
+
+/* Text Paragraph */
+font-family: Hind Madurai;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 2.025rem */
+    }
+    main{
+
+        
+                background-repeat: no-repeat;
+                background-image: url(../assets/blob.png) ;
+                background-position:  top right;
+                background-size: 600px ;
+
+    }
+    .content{
+        min-height: 80vh;
+        
+        /* background: green; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 10em; */
+        margin-inline: 6em;
+    }
+    .imgbx img{
+        display: block;
+        width: 100%;
+        object-fit: contain;
+    }
+    .imgbx{
+        width: 650px;
+    }
+    .container {
+  width: 300px;
+  height: 200px;
+  background-image: url('your-image1.jpg'), url('your-image2.jpg'), url('your-image3.jpg');
+}
+
+    .textbx{
+        width: 38rem;
+    }
+</style>
