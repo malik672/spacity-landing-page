@@ -1,46 +1,133 @@
 ---
-
-import Card from './card.astro'
+import Card from "./card.astro";
 ---
 
 <main>
-    <div class="cardbx">
-        
-            <Card num="01", subhead="Years of Experience", info="We are 05 years of experienced in this yoga field. Giving the best instructions."/>
-            <Card num="5", subhead="Experienced Trainer", info="We are 05 years of experienced in this yoga field. Giving the best instructions."/>
-            <Card num="500", subhead="Happy Clients", info="We are 05 years of experienced in this yoga field. Giving the best instructions."/>
-            <Card num="5", subhead="Monthly Routine", info="We are 05 years of experienced in this yoga field. Giving the best instructions."/>
+  <div class="cardbx">
+    <Card
+      num="01"
+      ,
+      subhead="Years of Experience"
+      ,
+      info="We are 05 years of experienced in this yoga field. Giving the best instructions."
+    />
+    <Card
+      num="5"
+      ,
+      subhead="Experienced Trainer"
+      ,
+      info="We are 05 years of experienced in this yoga field. Giving the best instructions."
+    />
+    <Card
+      num="500"
+      ,
+      subhead="Happy Clients"
+      ,
+      info="We are 05 years of experienced in this yoga field. Giving the best instructions."
+    />
+    <Card
+      num="5"
+      ,
+      subhead="Monthly Routine"
+      ,
+      info="We are 05 years of experienced in this yoga field. Giving the best instructions."
+    />
+  </div>
 
+  <div class="textbx">
+    <h1>We make your daily routine more sustainable with our services</h1>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+      sequi nesciunt
+    </p>
+    <h3 class="sign">Beauty Care</h3>
+    <div class="subbx">
+      <h6>Jimmy smiles</h6>
+      <h5>Founder</h5>
     </div>
-
-
-
-    <div class="textbx">
-        <h1>We make your daily routine more sustainable with our services</h1>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt</p>
-        <h3 class="sign">
-            Beauty Care
-        </h3>
-        <div class="subbx">
-            <h6>Jimmy smiles</h6>
-            <h5>Founder</h5>
-        </div>
-    </div>
+  </div>
 </main>
 
 <style>
-    .cardbx{
-        display: flex;
+  .cardbx {
+    display: flex;
     flex-wrap: wrap;
     gap: 1em;
     justify-content: space-evenly;
     align-items: center;
     width: 2700px;
-    }
-main{
+  }
+  .textbx{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 3rem;
+  }
+  .textbx h1{
+    color: #121212;
+
+/* H2 */
+color: #121212;
+
+/* H2 */
+font-family: Ibarra Real Nova;
+font-size: 3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 125.5%; /* 3.765rem */
+  }
+  .textbx p{
+    color: #3E3E3E;
+
+/* Text Paragraph */
+font-family: Hind Madurai;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 2.025rem */
+  }
+  .subbx {
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 1.25rem;
+  }
+  .subbx h6{
+    color: #121212;
+
+/* Text Body */
+font-family: Hind Madurai;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 1.875rem */
+
+  }
+  .sign{
+    color: #315316;
+font-family: Homemade Apple;
+font-size: 2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  .textbx h3{
+    color: #121212;
+
+/* H2 */
+font-family: Ibarra Real Nova;
+font-size: 3rem;
+font-style: normal;
+font-weight: 700;
+line-height: 125.5%; /* 3.765rem */
+  }
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
+  }
 </style>

@@ -1,0 +1,102 @@
+---
+import Ratings from "./ratings.astro";
+export interface CardProps{
+    productimg: string;
+
+
+}
+const{ productimg } = Astro.props
+---
+
+
+
+
+<div class="card">
+    <div class="imgbx">
+        <img src={productimg } alt="">
+    </div>
+    <div class="textbx">
+        <h3>Beauty ponds natural face</h3>
+        <h6>from $10 /items</h6>
+        <p>Here is some tips for new job seekars who want to get a dream job and want to shine in his career.</p>
+        <div class="bx">
+        <div class="rating">
+            <Ratings />
+        </div>
+        <div class="btn">
+            Shop Now
+        </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .bx{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 1em; */
+    }
+    .btn{
+        border-radius: 3.125rem;
+background: linear-gradient(146deg, #315316 0%, #72A748 100%);
+padding: .5em 1em;
+color: white;
+    }
+.card{
+    width: 19.67031rem;
+    background: #FFF;
+box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.07);
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+gap: 3em;
+}
+.imgbx{
+    border-radius: 0.5rem;
+border: 1px solid #EEE;
+background: linear-gradient(176deg, #FDFDFD 0%, #E7E7E7 100%);
+display: flex;
+width: 16.6875rem;
+padding: 2.125rem 4.125rem;
+align-items: flex-start;
+gap: 0.625rem;
+}
+h3{
+    color: #121212;
+
+/* H5 */
+font-family: Hind Madurai;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 115.5%; /* 1.7325rem */
+}
+p{
+    color: #3E3E3E;
+
+/* Text Paragraph */
+font-family: Hind Madurai;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 180%; /* 2.025rem */
+}
+h6{
+    color: #315316;
+
+/* Text Body */
+font-family: Hind Madurai;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: 150%; /* 1.875rem */
+}
+img{
+    width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+</style>

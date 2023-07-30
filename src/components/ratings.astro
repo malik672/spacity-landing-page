@@ -1,0 +1,38 @@
+---
+// import { ratingcount } from "./ratings-stars.astro";
+import { RATINGS } from "../consts";
+// make the rating (const) a prop that is passed into the component because it will be used in diffrent places
+---
+
+<div class="rating-container">
+    <svg xmlns="http://www.w3.org/2000/svg" width="108" height="18" viewBox="0 0 108 18" fill="none">
+        <path class="star" fill-rule="evenodd" clip-rule="evenodd" d="M9 13.5L3.70993 16.2812L4.72025 10.3906L0.440491 6.21885L6.35497 5.35942L9 0L11.645 5.35942L17.5595 6.21885L13.2798 10.3906L14.2901 16.2812L9 13.5Z" fill="#CFCFCF"/>
+        <path class="star" fill-rule="evenodd" clip-rule="evenodd" d="M31.5 13.5L26.2099 16.2812L27.2202 10.3906L22.9405 6.21885L28.855 5.35942L31.5 0L34.145 5.35942L40.0595 6.21885L35.7798 10.3906L36.7901 16.2812L31.5 13.5Z" fill="#CFCFCF"/>
+        <path class="star" fill-rule="evenodd" clip-rule="evenodd" d="M54 13.5L48.7099 16.2812L49.7202 10.3906L45.4405 6.21885L51.355 5.35942L54 0L56.645 5.35942L62.5595 6.21885L58.2798 10.3906L59.2901 16.2812L54 13.5Z" fill="#CFCFCF"/>
+        <path class="star" fill-rule="evenodd" clip-rule="evenodd" d="M76.5 13.5L71.2099 16.2812L72.2202 10.3906L67.9405 6.21885L73.855 5.35942L76.5 0L79.145 5.35942L85.0595 6.21885L80.7798 10.3906L81.7901 16.2812L76.5 13.5Z" fill="#CFCFCF"/>
+        <path class="star" fill-rule="evenodd" clip-rule="evenodd" d="M99 13.5L93.7099 16.2812L94.7202 10.3906L90.4405 6.21885L96.355 5.35942L99 0L101.645 5.35942L107.56 6.21885L103.28 10.3906L104.29 16.2812L99 13.5Z" fill="#CFCFCF"/>
+    </svg>
+  </div>
+  
+  <style>
+
+.star.fill{
+    fill: #FFD48A;
+}
+  
+  </style>
+  
+  <script>
+  import { RATINGS } from "../consts";
+// const RATINGS = 5;
+  const ratings = RATINGS; // example ratings
+  const averageRating = ratings.reduce((total, rating) => total + rating, 0) / ratings.length;
+  
+  const starElements = document.querySelectorAll('.star');
+  
+  for (let i = 0; i < starElements.length; i++) {
+    if (i < Math.round(averageRating)) {
+      starElements[i].classList.add('fill');
+    }
+  }
+  </script>
